@@ -235,8 +235,8 @@ class _FormBuilderFilePickerState
           children: List.generate(
             files.length,
             (index) {
-              debugPrint(file[index]);
-              debugPrint(file[index].bytes);
+              debugPrint(files[index]);
+              debugPrint(files[index].bytes);
               return Container(
                 height: itemSize,
                 width: itemSize,
