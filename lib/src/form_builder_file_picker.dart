@@ -246,8 +246,9 @@ class _FormBuilderFilePickerState
                       alignment: Alignment.center,
                       child: (imageFileExts.contains(
                                   files[index].extension!.toLowerCase()) &&
-                              widget.previewImages)
-                          ? Image.memory(files[index].bytes,
+                              widget.previewImages &&
+                              files[index].bytes != null)
+                          ? Image.memory(files[index].bytes!,
                               fit: BoxFit.cover)
                           : Container(
                               alignment: Alignment.center,
